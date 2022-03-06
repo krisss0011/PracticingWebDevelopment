@@ -1,0 +1,12 @@
+.vsebina {
+    display: flex;
+	min-height: 35vh;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    margin: 5vh;
+}
+
+.footer {
+    float: right;
+}
