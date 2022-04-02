@@ -19,23 +19,23 @@ include_once('../tpl/header.php');
     <main>
       <div class="vsebina">
         <h1>Kontakt</h1>
-        <form class="row g-3 needs-validation">
+        <form class="row g-3 needs-validation" action="../logic/validation.php" method="POST">
           <div class="col-md-4">
             <label for="validationCustom01" class="form-label">Ime in priimek</label>
-            <input type="text" class="form-control" id="validationCustom01" required>
+            <input type="text" class="form-control" id="name" name="name">
           </div>
           <div class="col-md-4">
             <label for="validationCustom02" class="form-label">E-mail</label>
-            <input type="text" class="form-control" id="validationCustom02" required>
+            <input type="text" class="form-control" id="email" name="email">
           </div>
           <div class="col-md-4">
             <label for="validationCustomUsername" class="form-label">Telefon</label>
             <div class="input-group has-validation">
-              <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+              <input type="text" class="form-control" id="phone" name="phone" aria-describedby="inputGroupPrepend">
             </div>
           </div>
           <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+            <textarea class="form-control" placeholder="Leave a comment here" id="message" name="message"></textarea>
             <label for="floatingTextarea">Vaše sporočilo</label>
           </div>
           <div class="col-12">
@@ -44,6 +44,7 @@ include_once('../tpl/header.php');
         </form>
       </div>
     </main>
+
     <?php
         include_once ("../tpl/footer.php");
       ?>

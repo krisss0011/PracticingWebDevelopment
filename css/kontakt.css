@@ -10,3 +10,9 @@
 .footer {
     float: right;
 }
+
+#alert {
+	position: absolute !important;
+	bottom: 0 !important;
+	text-align: center !important;
+}

@@ -3,6 +3,7 @@ ob_start();
 session_start();
 
 include_once('../tpl/header.php');
+$_SESSION["redirect"]="false";
 
 ?>
 <!DOCTYPE html>

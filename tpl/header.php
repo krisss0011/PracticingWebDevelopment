@@ -1,6 +1,4 @@
 <?php
-ob_start();
-session_start();
 
 require_once('../logic/menu.php');
 
@@ -14,10 +12,14 @@ require_once('../logic/menu.php');
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.html">Domov</a>
-                </li>
+                <?php
+                
+             //Looping through two dimensional array and getting the links
+
+                array_map(function ($row){
+                echo '<li class = "nav-item"><a class = "nav-link" href="'.$row["link"].'">'.$row["title"].'</a></li>';  
+            }, $links)
+            ?>
             </div>
         </div>
         </nav>
